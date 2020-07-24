@@ -1,7 +1,13 @@
+DATE /T > ping2.txt
+TIME /T >> ping2.txt
+ping 8.8.8.8 > ping1.txt
+
+
+
 #!/bin/sh
 clear
 date > ~/Documents/scripts/network-check/ping2.txt
-ping -c5 8.8.8.8 > ~/Documents/scripts/network-check/ping1.txt
+ping -c4 8.8.8.8 > ~/Documents/scripts/network-check/ping1.txt
 sed -i '9d' ~/Documents/scripts/network-check/ping1.txt
 sed -i '8d' ~/Documents/scripts/network-check/ping1.txt
 sed -i '7d' ~/Documents/scripts/network-check/ping1.txt
